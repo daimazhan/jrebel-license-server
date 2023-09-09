@@ -16,7 +16,7 @@ logging:
     org.springframework.web: INFO
     com.imjcker.jrebel: DEBUG
   file:
-    name: ${user.home}/logs/jrebel.log
+    name: ${user.home}/.${spring.application.name}/logs/jrebel.log
   logback:
     rollingpolicy:
       max-history: 7

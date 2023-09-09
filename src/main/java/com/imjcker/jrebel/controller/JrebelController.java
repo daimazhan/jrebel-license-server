@@ -1,9 +1,9 @@
 package com.imjcker.jrebel.controller;
 
+import com.alibaba.fastjson2.JSONObject;
 import com.imjcker.jrebel.config.JrebelConfigurationProperties;
 import com.imjcker.jrebel.sys.JrebelSign;
 import com.imjcker.jrebel.sys.rsasign;
-import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -54,7 +54,7 @@ public class JrebelController {
                 "    \"evaluationLicense\": false,\n" +
                 "    \"seatPoolType\": \"standalone\"\n" +
                 "}\n";
-        JSONObject jsonObject = JSONObject.fromObject(jsonStr);
+        JSONObject jsonObject = JSONObject.parseObject(jsonStr);
         String body = jsonObject.toString();
         response.getWriter().print(body);
     }
@@ -73,7 +73,7 @@ public class JrebelController {
                 "    \"msg\": null,\n" +
                 "    \"statusMessage\": null\n" +
                 "}\n";
-        JSONObject jsonObject = JSONObject.fromObject(jsonStr);
+        JSONObject jsonObject = JSONObject.parseObject(jsonStr);
         if (username != null) {
             jsonObject.put("company", username);
         }
@@ -124,7 +124,7 @@ public class JrebelController {
                 "    \"licenseValidUntil\": 1691839999000\n" +
                 "}";
 
-        JSONObject jsonObject = JSONObject.fromObject(jsonStr);
+        JSONObject jsonObject = JSONObject.parseObject(jsonStr);
         if (clientRandomness == null || username == null || guid == null) {
             response.setStatus(HttpServletResponse.SC_FORBIDDEN);
         } else {

@@ -19,6 +19,7 @@
         <spring-boot.version>2.7.9</spring-boot.version>
         <spring-cloud.version>2021.0.6</spring-cloud.version>
         <docker.image.registryUrl>192.168.0.115:5000</docker.image.registryUrl>
+        <!--suppress UnresolvedMavenProperty -->
         <docker.remote.host>${env.DOCKER_REMOTE_HOST}</docker.remote.host>
     </properties>
 
@@ -62,21 +63,27 @@
         <dependency>
             <groupId>org.bouncycastle</groupId>
             <artifactId>bcprov-jdk15on</artifactId>
-            <version>1.67</version>
+            <version>1.69</version>
         </dependency>
 
         <dependency>
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
-            <version>1.10</version>
+            <version>1.13</version>
         </dependency>
 
         <dependency>
+            <groupId>com.alibaba.fastjson2</groupId>
+            <artifactId>fastjson2</artifactId>
+            <version>2.0.39</version>
+        </dependency>
+
+<!--        <dependency>
             <groupId>net.sf.json-lib</groupId>
             <artifactId>json-lib</artifactId>
             <version>2.4</version>
             <classifier>jdk15</classifier>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>org.apache.commons</groupId>

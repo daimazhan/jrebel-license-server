@@ -30,3 +30,5 @@ build/
 ### VS Code ###
 .vscode/
 logs
+
+rebel.xml
