@@ -2,18 +2,9 @@
 
 一个基于spring boot的jrebel激活服务。  
 
-> A spring boot based Jrebel License Server.  
-
-docker镜像地址[点这里](https://hub.docker.com/repository/docker/imjcker/jrebel-license-server)  
-
-> docker image available [here](https://hub.docker.com/repository/docker/imjcker/jrebel-license-server)
-
-关注公众号【天府书虫】，发送关键字"jrebel"获取激活地址。  
-
-
-![usage](/index.png)
+> A spring boot based Jrebel License Server.
+  
 ## Usage (自建教程)
-
 
 ```shell script
 java -jar jrebel-license-server-2.0.0.jar 
